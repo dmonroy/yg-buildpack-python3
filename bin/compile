@@ -134,6 +134,10 @@ fi
 # Get the output as it comes, even in non-interactive mode
 export PYTHONUNBUFFERED=1
 
+echo "=================="
+echo $PATH
+echo "=================="
+
 # Install dependencies with Pip.
 puts-step "Installing dependencies using pip ($(python -m pip --version | awk '{print $2}'))"
 python -m pip install -r requirements.txt --exists-action=w --src=./.heroku/src | indent
